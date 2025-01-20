@@ -1,0 +1,165 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #f3e7ff, #ffe9e7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* App Container */
+.app-container {
+  width: 400px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  border: 3px solid #7b2cbf;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 30px rgba(123, 44, 191, 0.3);
+}
+
+/* QR Code Image */
+.app-container img {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  display: block;
+  border: 3px solid #7b2cbf;
+  border-radius: 12px;
+  background-color: #f8f3fd;
+  animation: fadeIn 1s ease;
+}
+
+/* Labels */
+.input-label {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: block;
+  color: #5e239d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Input Fields */
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin: 15px 0;
+  border: 3px solid #d3bfff;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: #fdf9ff;
+  color: #5d36b1;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus {
+  border-color: #7b2cbf;
+  box-shadow: 0 0 12px rgba(123, 44, 191, 0.5);
+}
+
+/* Buttons */
+button {
+  width: calc(48%); /* Ensures buttons fit side by side */
+  padding: 12px;
+  margin: 15px 5px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 3px solid #7b2cbf;
+  background: linear-gradient(to right, #9d50bb, #6e2bc1);
+  color: #ffffff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: linear-gradient(to right, #6e2bc1, #9d50bb);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(123, 44, 191, 0.4);
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Second Button (Download) */
+button:last-child {
+  background: linear-gradient(to right, #fff, #d3bfff);
+  color: #7b2cbf;
+  border: 3px solid #d3bfff;
+}
+
+button:last-child:hover {
+  background: linear-gradient(to right, #7b2cbf, #9d50bb);
+  color: #ffffff;
+}
+
+button:last-child:active {
+  transform: scale(0.95);
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Pop-Up Alert Styling */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Add Animations for Inputs */
+@keyframes focusShake {
+  0%, 100% {
+      transform: translateX(0);
+  }
+  25% {
+      transform: translateX(-2px);
+  }
+  50% {
+      transform: translateX(2px);
+  }
+  75% {
+      transform: translateX(-2px);
+  }
+}
+
+input:invalid {
+  animation: focusShake 0.3s ease;
+  border-color: #ff4d4d;
+}
+
+/* Add Transition to Alerts */
+.alert {
+  color: red;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 10px;
+}
